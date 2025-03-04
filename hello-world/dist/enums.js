@@ -24,5 +24,5 @@ var SeatChoice2;
     SeatChoice2["FOURTH"] = "jk";
 })(SeatChoice2 || (SeatChoice2 = {}));
 console.log(SeatChoice2);
-console.log(SeatChoice2);
+console.log(454);
 //# sourceMappingURL=enums.js.map
