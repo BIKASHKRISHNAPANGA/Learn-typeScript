@@ -72,3 +72,16 @@ class Sellable<T>{
         this.cart.push(product)
     }
 }
+
+//In class Sellable<T>, <T> is a generic type parameter, meaning the class can work with any data type.
+
+// When an object of Sellable is created, T will be replaced by a specific type.
+// This makes the class reusable and type-safe.
+// ex const bookStore = new Sellable<Book>(); // T is replaced with Book type
+// const toyStore = new Sellable<Toy>();   // T is replaced with Toy type
+
+
+// product: T means that product must be of type T (whatever type was specified when creating the object).
+// It does not get properties from public cart: T[] = [].
+// T[] just means "an array of T".
+// product is a single element of type T.
