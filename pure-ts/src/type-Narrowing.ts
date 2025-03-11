@@ -46,3 +46,61 @@ console.log(account.name+"has a accaount")
 }
 
 // its just narrowing the type to use it properly
+
+
+type Fish={swim:()=>void}
+type animal={run:()=>void}
+ function isFish(pet: Fish|animal){
+    return(pet as Fish).swim!==undefined//here its output in boolen ,may defined or undefind 
+ }
+
+ function getPet(pet:Fish|animal){
+    if(isFish(pet)){
+        return"fish food"
+    }
+    else{
+        return"dog food"
+    }
+ }
+
+
+ interface circle{
+    kind:"circle",
+    radius: number
+ }
+ interface square{
+    kind:"square",
+    side: number
+ }
+interface Rectangle{
+    kind:"rectangle",
+    width: number,
+    length: number
+}
+type shape =circle|square|Rectangle
+function gettrueShape(shape:shape){
+    if(shape.kind==="circle")
+        return Math.PI*shape.radius**2
+    else if(shape.kind==="square")
+        return shape.side**2
+    else
+    return shape.width*shape.length
+}
+
+//or use switch
+
+function getArea(shape:shape){
+    switch(shape.kind){
+    case "circle":
+        return Math.PI*shape.radius**2
+        break
+        case "square":
+            return shape.side**2
+            break
+            case "rectangle":
+            return shape.width*shape.length
+            break
+
+            default:
+            return "dedo bhai kuch value"
+}}
